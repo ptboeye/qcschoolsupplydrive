@@ -7,7 +7,7 @@
 <meta name="description" content="Help set up students on both sides of the river for a successful school year. Drop off donations August 3-7, or stop by Buy Sell Build QC on August 8.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=telegraf@700,500,300&display=swap">
 <style>
   :root {
@@ -46,6 +46,25 @@
     max-width: 1040px;
     margin: 0 auto;
     padding: 0 24px;
+  }
+
+  /* ---------- NAV ---------- */
+
+  .site-nav {
+    background: var(--white);
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(5,14,61,0.08);
+  }
+
+  .site-nav .wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-nav img {
+    height: 52px;
+    width: auto;
+    display: block;
   }
 
   /* ---------- HERO ---------- */
@@ -97,6 +116,37 @@
     max-width: 780px;
     position: relative;
     z-index: 1;
+  }
+
+  .hero-date {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .hero-date .day {
+    font-family: 'Telegraf', sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--mint);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .hero-date .date {
+    font-family: 'Telegraf', sans-serif;
+    font-weight: 700;
+    font-size: clamp(3.2rem, 9vw, 6rem);
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+
+  .hero-date .date span {
+    color: var(--coral);
   }
 
   .hero-sub {
@@ -194,9 +244,9 @@
 
   .why-signoff {
     margin-top: 34px;
-    font-family: 'Telegraf', sans-serif;
-    font-weight: 500;
-    font-size: 1.05rem;
+    font-family: 'Petit Formal Script', cursive;
+    font-weight: 400;
+    font-size: 2.4rem;
     color: var(--navy);
   }
 
@@ -332,34 +382,33 @@
   .needed-note strong { font-weight: 700; }
 
   .donate-card {
-    margin-top: 24px;
+    margin-top: 18px;
     display: flex;
     align-items: center;
-    gap: 24px;
-    padding: 24px 28px;
-    background: var(--navy);
+    gap: 20px;
+    padding: 20px 24px;
+    background: var(--white);
     border-radius: 12px;
-    max-width: 640px;
+    max-width: 440px;
   }
 
   .donate-card img {
-    width: 92px;
-    height: 92px;
-    border-radius: 10px;
+    width: 84px;
+    height: 84px;
+    border-radius: 8px;
     background: var(--white);
-    padding: 6px;
     flex-shrink: 0;
   }
 
   .donate-card-text h3 {
-    color: var(--white);
-    font-size: 1.15rem;
-    margin-bottom: 6px;
+    color: var(--navy);
+    font-size: 1.05rem;
+    margin-bottom: 4px;
   }
 
   .donate-card-text p {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.95rem;
+    color: var(--gray);
+    font-size: 0.9rem;
   }
 
   /* ---------- SCHOOLS / BRIDGE ---------- */
@@ -423,9 +472,38 @@
     margin-bottom: 20px;
   }
 
+  .footer-logo-badge {
+    display: inline-block;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin-bottom: 24px;
+  }
+
+  .footer-logo-badge img {
+    height: 34px;
+    width: auto;
+    display: block;
+  }
+
   .footer-contact {
     font-size: 0.95rem;
     line-height: 1.8;
+  }
+
+  .footer-contact-wrap {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .footer-headshot {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid rgba(255,255,255,0.25);
   }
 
   .footer-contact .name {
@@ -486,13 +564,22 @@
 </head>
 <body>
 
+<nav class="site-nav">
+  <div class="wrap">
+    <img src="personal-logo.png" alt="PT Boeye logo">
+  </div>
+</nav>
+
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow">QC School Supplies Drive</span>
+    <div class="hero-date">
+      <span class="day">Saturday</span>
+      <span class="date">AUG <span>8</span></span>
+    </div>
     <h1>A community effort so every student starts the year ready.</h1>
     <p class="hero-sub">Backpacks, notebooks, and everyday classroom essentials for kids at schools on both sides of the river. Here's how you can help.</p>
     <div class="hero-meta">
-      <span class="meta-pill">Saturday, August 8</span>
       <span class="meta-pill">Buy Sell Build QC</span>
       <span class="meta-pill">Schools on both sides of the river</span>
     </div>
@@ -517,7 +604,7 @@
     <h2>Because a good start to the school year shouldn't depend on what a family can afford.</h2>
     <p>My family has spent generations working in education right here in the Quad Cities, and I've seen firsthand how strong our local schools are. Students across our community have real opportunities in front of them, but that only holds true when they walk in the door with what they need on day one.</p>
     <p>This drive is my way of making sure that's true for as many kids as possible this year, and I can't do it alone. I'm asking this community to collaborate with me the same way it always has: by showing up for its kids.</p>
-    <div class="why-signoff">&mdash; PT Boeye</div>
+    <div class="why-signoff">PT Boeye</div>
   </div>
 </section>
 
@@ -547,7 +634,14 @@
       <div class="t-item">
         <div class="t-date">Anytime</div>
         <div class="t-title">Prefer to give money instead?</div>
-        <div class="t-desc">Scan the Venmo code below and PT will do the shopping for you.</div>
+        <div class="t-desc">Scan the code and PT will do the shopping for you.</div>
+        <div class="donate-card">
+          <img src="venmo-qr.png" alt="Venmo QR code for PT Boeye">
+          <div class="donate-card-text">
+            <h3>Donate via Venmo</h3>
+            <p>Scan to send &mdash; PT handles the shopping.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -601,14 +695,6 @@
     <div class="needed-note">
       <strong>Shopping for a specific grade?</strong> Each school has its own detailed supply list. Reach out and we'll send you the exact one so your donation goes right where it's needed.
     </div>
-
-    <div class="donate-card">
-      <img src="venmo-qr.png" alt="Venmo QR code for PT Boeye">
-      <div class="donate-card-text">
-        <h3>Would rather donate money?</h3>
-        <p>Scan to send via Venmo &mdash; PT will handle the shopping.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -651,15 +737,21 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-cta">
+        <div class="footer-logo-badge">
+          <img src="personal-logo.png" alt="PT Boeye logo">
+        </div>
         <h3>Questions, or want to give directly?</h3>
       </div>
-      <div class="footer-contact">
-        <div class="name">PT Boeye, Realtor</div>
-        <div>Buy Sell Build QC &middot; Real Broker, LLC</div>
-        <div>BOEYE Realtor Group</div>
-        <div>3565 Middle Road, Bettendorf, IA</div>
-        <div>cell: 563.204.2241</div>
-        <div>email: ptboeye@bradboeye.com</div>
+      <div class="footer-contact-wrap">
+        <img class="footer-headshot" src="headshot.png" alt="PT Boeye">
+        <div class="footer-contact">
+          <div class="name">PT Boeye, Realtor</div>
+          <div>Buy Sell Build QC &middot; Real Broker, LLC</div>
+          <div>BOEYE Realtor Group</div>
+          <div>3565 Middle Road, Bettendorf, IA</div>
+          <div>cell: 563.204.2241</div>
+          <div>email: ptboeye@bradboeye.com</div>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
