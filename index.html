@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QC School Supplies Drive</title>
+<meta name="description" content="Help set up students on both sides of the river for a successful school year. Drop off donations August 3-7, or stop by Buy Sell Build QC on August 8.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=telegraf@700,500,300&display=swap">
+<style>
+  :root {
+    --navy: #050E3D;
+    --white: #FFFFFF;
+    --teal: #BFDDDB;
+    --gray: #615B56;
+    --near-black: #1D1D1D;
+    --cyan: #05C3F9;
+    --mint: #00FBF0;
+    --coral: #FF557E;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--near-black);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 96px 0 120px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,85,126,0.18), transparent 70%);
+  }
+
+  .hero-river {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mint);
+    margin-bottom: 22px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 5.6vw, 4.2rem);
+    max-width: 780px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-sub {
+    margin-top: 28px;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.82);
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-meta {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .meta-pill {
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 10px 18px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .cta-row {
+    margin-top: 44px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--coral);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 15px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(255,85,126,0.35);
+  }
+
+  /* ---------- WHY ---------- */
+
+  .why {
+    padding: 96px 0;
+    background:
+      repeating-linear-gradient(
+        var(--white) 0px, var(--white) 41px,
+        rgba(97,91,86,0.14) 42px
+      );
+    position: relative;
+  }
+
+  .why-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 18px;
+  }
+
+  .why h2 {
+    font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+    margin-bottom: 30px;
+    color: var(--navy);
+  }
+
+  .why p {
+    font-size: 1.15rem;
+    color: var(--near-black);
+    max-width: 680px;
+  }
+
+  .why p + p { margin-top: 20px; }
+
+  .why-signoff {
+    margin-top: 34px;
+    font-family: 'Telegraf', sans-serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--navy);
+  }
+
+  /* ---------- HOW TO HELP (timeline) ---------- */
+
+  .help {
+    padding: 96px 0;
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .help h2 {
+    font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+    margin-bottom: 12px;
+  }
+
+  .help .section-label { color: var(--mint); }
+
+  .help-intro {
+    color: rgba(255,255,255,0.75);
+    max-width: 560px;
+    margin-bottom: 56px;
+    font-size: 1.05rem;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+    border-left: 2px solid rgba(255,255,255,0.18);
+  }
+
+  .t-item {
+    position: relative;
+    padding-bottom: 48px;
+  }
+
+  .t-item:last-child { padding-bottom: 0; }
+
+  .t-item::before {
+    content: "";
+    position: absolute;
+    left: -46px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--coral);
+    box-shadow: 0 0 0 4px rgba(255,85,126,0.2);
+  }
+
+  .t-date {
+    font-family: 'Telegraf', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--mint);
+    margin-bottom: 8px;
+  }
+
+  .t-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+  }
+
+  .t-desc {
+    color: rgba(255,255,255,0.72);
+    max-width: 480px;
+    font-size: 0.98rem;
+  }
+
+  .raffle-note {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy);
+    background: var(--mint);
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+
+  /* ---------- WHAT'S NEEDED ---------- */
+
+  .needed {
+    padding: 96px 0;
+  }
+
+  .needed h2 {
+    font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .needed-intro {
+    color: var(--gray);
+    max-width: 560px;
+    margin-bottom: 48px;
+    font-size: 1.05rem;
+  }
+
+  .check-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 32px;
+    list-style: none;
+  }
+
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.02rem;
+    font-weight: 500;
+    padding: 6px 0;
+  }
+
+  .check-item svg {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+  }
+
+  .needed-note {
+    margin-top: 48px;
+    padding: 24px 28px;
+    background: var(--teal);
+    border-radius: 12px;
+    font-size: 0.98rem;
+    color: var(--navy);
+    max-width: 640px;
+  }
+
+  .needed-note strong { font-weight: 700; }
+
+  .donate-card {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 28px;
+    background: var(--navy);
+    border-radius: 12px;
+    max-width: 640px;
+  }
+
+  .donate-card img {
+    width: 92px;
+    height: 92px;
+    border-radius: 10px;
+    background: var(--white);
+    padding: 6px;
+    flex-shrink: 0;
+  }
+
+  .donate-card-text h3 {
+    color: var(--white);
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+
+  .donate-card-text p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+  }
+
+  /* ---------- SCHOOLS / BRIDGE ---------- */
+
+  .schools {
+    padding: 80px 0 96px;
+    background: #FAFAF9;
+    text-align: center;
+  }
+
+  .schools h2 {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .schools-sub {
+    color: var(--gray);
+    max-width: 480px;
+    margin: 0 auto 40px;
+    font-size: 1.02rem;
+  }
+
+  .bridge-illustration {
+    max-width: 640px;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .bank-labels {
+    display: flex;
+    justify-content: space-between;
+    max-width: 560px;
+    margin: 18px auto 0;
+    font-family: 'Telegraf', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--navy);
+    letter-spacing: 0.04em;
+  }
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.85);
+    padding: 64px 0 48px;
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .footer-cta h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    max-width: 360px;
+    margin-bottom: 20px;
+  }
+
+  .footer-contact {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .footer-contact .name {
+    font-family: 'Telegraf', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .footer-bottom {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.5);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* ---------- responsive ---------- */
+
+  @media (max-width: 760px) {
+    .hero { padding: 64px 0 80px; }
+    .why, .help, .needed { padding: 64px 0; }
+    .check-list { grid-template-columns: repeat(2, 1fr); }
+    .school-grid { grid-template-columns: 1fr; }
+    .footer-grid { flex-direction: column; }
+  }
+
+  @media (max-width: 480px) {
+    .check-list { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- reduced motion ---------- */
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn:hover { transform: none; }
+  }
+
+  /* scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">QC School Supplies Drive</span>
+    <h1>A community effort so every student starts the year ready.</h1>
+    <p class="hero-sub">Backpacks, notebooks, and everyday classroom essentials for kids at schools on both sides of the river. Here's how you can help.</p>
+    <div class="hero-meta">
+      <span class="meta-pill">Saturday, August 8</span>
+      <span class="meta-pill">Buy Sell Build QC (BSBQC)</span>
+      <span class="meta-pill">Schools on both sides of the river</span>
+    </div>
+    <div class="cta-row">
+      <a href="#help" class="btn">See how to help &darr;</a>
+    </div>
+  </div>
+
+  <svg class="hero-river" viewBox="0 0 1200 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0,120 Q120,90 240,110 T480,105 T720,115 T960,100 T1200,112 V160 H0 Z" fill="rgba(191,221,219,0.10)"/>
+    <path d="M0,135 Q150,110 300,128 T600,122 T900,132 T1200,120 V160 H0 Z" fill="rgba(5,195,249,0.08)"/>
+    <line x1="180" y1="0" x2="180" y2="118" stroke="rgba(255,255,255,0.18)" stroke-width="3"/>
+    <line x1="1020" y1="0" x2="1020" y2="106" stroke="rgba(255,255,255,0.18)" stroke-width="3"/>
+    <path d="M180,40 C 400,-10 800,-10 1020,40" stroke="rgba(0,251,240,0.35)" stroke-width="3" fill="none"/>
+    <path d="M180,58 L1020,58" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  </svg>
+</section>
+
+<section class="why">
+  <div class="wrap why-inner reveal">
+    <div class="section-label">Why I'm doing this</div>
+    <h2>Because a good start to the school year shouldn't depend on what a family can afford.</h2>
+    <p>My family has spent generations working in education right here in the Quad Cities, and I've seen firsthand how strong our local schools are. Students at Adams, Hamilton, and UTHS have real opportunities in front of them, but that only holds true when they walk in the door with what they need on day one.</p>
+    <p>This drive is my way of making sure that's true for as many kids as possible this year, and I can't do it alone. I'm asking this community to collaborate with me the same way it always has: by showing up for its kids.</p>
+    <div class="why-signoff">&mdash; PT Boeye</div>
+  </div>
+</section>
+
+<section class="help" id="help">
+  <div class="wrap">
+    <div class="section-label">How to help</div>
+    <h2>Three ways to pitch in</h2>
+    <p class="help-intro">However you can contribute, it makes a difference for a kid heading back to class.</p>
+
+    <div class="timeline reveal">
+      <div class="t-item">
+        <div class="t-date">August 3&ndash;7 &middot; 9:00am&ndash;4:00pm</div>
+        <div class="t-title">Drop off donations all week</div>
+        <div class="t-desc">Bring supplies by Buy Sell Build QC (BSBQC), 3565 Middle Road, Bettendorf, IA &mdash; any day that week, no need to wait for the event.</div>
+      </div>
+      <div class="t-item">
+        <div class="t-date">Saturday, August 8 &middot; 10:00am&ndash;3:00pm</div>
+        <div class="t-title">Stop by BSBQC for drop-off day</div>
+        <div class="t-desc">3565 Middle Road, Bettendorf, IA. Bring your donations in person and you'll be entered into our raffle for local restaurant gift cards.</div>
+        <div class="raffle-note">Drop off = raffle entry</div>
+      </div>
+      <div class="t-item">
+        <div class="t-date">Sunday, August 9 &middot; 4:00pm</div>
+        <div class="t-title">Raffle drawing, live on Instagram</div>
+        <div class="t-desc">Winners are drawn live on our Instagram &mdash; no need to be present.</div>
+      </div>
+      <div class="t-item">
+        <div class="t-date">Anytime</div>
+        <div class="t-title">Prefer to give money instead?</div>
+        <div class="t-desc">Scan the Venmo code below and PT will do the shopping for you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="needed">
+  <div class="wrap">
+    <div class="section-label">What's needed</div>
+    <h2>The most-needed items right now</h2>
+    <p class="needed-intro">These are the essentials that go furthest across every classroom:</p>
+
+    <ul class="check-list reveal">
+      <li class="check-item">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#FF557E" stroke-width="2"/></svg>
+        Paper towels
+      </li>
+      <li class="check-item">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#FF557E" stroke-width="2"/></svg>
+        Kleenex
+      </li>
+      <li class="check-item">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#FF557E" stroke-width="2"/></svg>
+        Hand sanitizer
+      </li>
+      <li class="check-item">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#FF557E" stroke-width="2"/></svg>
+        Disinfectant wipes
+      </li>
+      <li class="check-item">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#FF557E" stroke-width="2"/></svg>
+        Dry erase markers
+      </li>
+      <li class="check-item">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#FF557E" stroke-width="2"/></svg>
+        Pencil / art boxes
+      </li>
+      <li class="check-item">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#FF557E" stroke-width="2"/></svg>
+        Washable markers
+      </li>
+      <li class="check-item">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#FF557E" stroke-width="2"/></svg>
+        Quart Ziploc bags
+      </li>
+      <li class="check-item">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#FF557E" stroke-width="2"/></svg>
+        Backpacks
+      </li>
+    </ul>
+
+    <div class="needed-note">
+      <strong>Shopping for a specific grade?</strong> Each school has its own detailed supply list. Reach out and we'll send you the exact one so your donation goes right where it's needed.
+    </div>
+
+    <div class="donate-card">
+      <img src="venmo-qr.png" alt="Venmo QR code for PT Boeye">
+      <div class="donate-card-text">
+        <h3>Would rather donate money?</h3>
+        <p>Scan to send via Venmo &mdash; PT will handle the shopping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="schools">
+  <div class="wrap">
+    <h2>Who this benefits</h2>
+    <p class="schools-sub">Schools on both sides of the river &mdash; because a strong Quad Cities doesn't stop at a state line.</p>
+
+    <svg class="bridge-illustration reveal" viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0,150 Q160,120 320,145 T640,150 V220 H0 Z" fill="rgba(191,221,219,0.5)"/>
+      <path d="M0,168 Q160,142 320,162 T640,168 V220 H0 Z" fill="rgba(5,195,249,0.18)"/>
+      <line x1="90" y1="60" x2="90" y2="150" stroke="#050E3D" stroke-width="4"/>
+      <line x1="550" y1="60" x2="550" y2="150" stroke="#050E3D" stroke-width="4"/>
+      <path d="M90,90 C 220,20 420,20 550,90" stroke="#FF557E" stroke-width="4" fill="none"/>
+      <line x1="90" y1="112" x2="550" y2="112" stroke="#050E3D" stroke-width="3"/>
+      <line x1="150" y1="90" x2="150" y2="112" stroke="#615B56" stroke-width="2"/>
+      <line x1="250" y1="70" x2="250" y2="112" stroke="#615B56" stroke-width="2"/>
+      <line x1="390" y1="68" x2="390" y2="112" stroke="#615B56" stroke-width="2"/>
+      <line x1="490" y1="88" x2="490" y2="112" stroke="#615B56" stroke-width="2"/>
+      <rect x="55" y="150" width="70" height="14" rx="2" fill="#050E3D"/>
+      <rect x="515" y="150" width="70" height="14" rx="2" fill="#050E3D"/>
+      <g transform="translate(64,124)">
+        <rect x="0" y="6" width="20" height="16" rx="1" fill="#00FBF0"/>
+        <polygon points="0,6 10,-4 20,6" fill="#050E3D"/>
+      </g>
+      <g transform="translate(556,124)">
+        <rect x="0" y="6" width="20" height="16" rx="1" fill="#00FBF0"/>
+        <polygon points="0,6 10,-4 20,6" fill="#050E3D"/>
+      </g>
+    </svg>
+
+    <div class="bank-labels">
+      <span>Iowa side</span>
+      <span>Illinois side</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-cta">
+        <h3>Questions, or want to give directly?</h3>
+      </div>
+      <div class="footer-contact">
+        <div class="name">PT Boeye, Realtor</div>
+        <div>Buy Sell Build QC (BSBQC) &middot; Real Broker, LLC</div>
+        <div>BOEYE Realtor Group</div>
+        <div>3565 Middle Road, Bettendorf, IA</div>
+        <div>cell: 563.204.2241</div>
+        <div>email: ptboeye@bradboeye.com</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>QC School Supplies Drive &middot; Quad Cities, IA/IL</span>
+      <span>Work Hard. Be Kind.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
